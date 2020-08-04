@@ -68,7 +68,7 @@ jQuery(function ($) {
         var id = this.id.slice(this.id.lastIndexOf('-') + 1);
         $('#modal-input-id-disabled').attr('value', id);
         $('#modal-input-username').attr('value', $('#name-' + id).text());
-        $('#modal-input-password').attr('value', $('#password-' + id).text());
+        $('#modal-input-password').attr('value', "");
         var userRow = $("[id=" + id + "]");
         var rolesList = ["ROLE_ADMIN", "ROLE_USER"];
         var userRoles = userRow.find('#userRoles-' + id).text();
@@ -120,7 +120,7 @@ function addTableRow(element) {
     var markup = `<tr id="${id}">
                         <td id="userId-${id}">${id}</td>
                         <td id="name-${id}">${name}</td>
-                        <td id="password-${id}">${password}</td>
+                        <td id="password-${id}">ENCRYPTED</td>
                         <td id="userRoles-${id}">${roles}</td>
                         <td><button type="button" class="btn btn-info edit-user" data-toggle="modal" data-target="#modalWindow" id="editButton-${id}">Edit</button></td>
                         <td><button type="button" class="btn btn-info delete-row" id="deleteButton-${id}">Delete</button></td>

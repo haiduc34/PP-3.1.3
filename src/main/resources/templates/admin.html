@@ -202,7 +202,7 @@
                                         <tr th:each="userInfo : ${user}">
                                             <td th:text="${user.id}"></td>
                                             <td th:text="${user.name}"></td>
-                                            <td th:text="${user.password}"></td>
+                                            <td th:text="ENCRYPTED"></td>
                                             <td th:text="${user.getRolesString()}"></td>
                                         </tr>
                                         </tbody>
